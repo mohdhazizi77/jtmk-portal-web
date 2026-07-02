@@ -56,25 +56,6 @@ Install Node packages and run the Vite development server:
 
 The application will now be accessible at: **http://localhost:8080**
 
----
-
-## 📊 Database Schema (Custom Users)
-
-The application uses a customized users table layout designed for structured identification and first-time login onboarding tracking:
-
-Schema::create('users', function (Blueprint $table) {
-$table->id();
-$table->string('nric')->unique();
-$table->string('name');
-$table->string('phone_number')->nullable();
-$table->string('email')->unique();
-$table->timestamp('email_verified_at')->nullable();
-$table->boolean('is_first_login')->default(1)->comment('0 = FALSE, 1 = TRUE');
-$table->timestamp('is_first_login_at')->nullable()->comment('TIMESTAMP OF FIRST LOGIN');
-$table->string('password');
-$table->rememberToken();
-$table->timestamps();
-});
 
 ---
 
