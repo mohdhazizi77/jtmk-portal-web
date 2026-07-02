@@ -78,34 +78,6 @@ $table->timestamps();
 
 ---
 
-## 🔐 Authorization & Access Control
-
-The application implements a strict **Resource-Action** naming convention for clear visual scoping and modularity when rendering checkboxes or matching permissions within UI layouts.
-
-### Permissions Layout Matrix
-
-- permission_management-view
-- permission_management-create
-- permission_management-edit
-- permission_management-delete
-- role_management-view
-- role_management-create
-- role_management-edit
-- role_management-delete
-- user_management-view
-- user_management-create
-- user_management-edit
-- user_management-delete
-
-### Seeded Accounts (Development)
-
-| Role | Email | Password | Custom Attributes Set | Target Permissions |
-| :--- | :--- | :--- | :--- | :--- |
-| **Super Admin** | superadmin@jtmk.com | password | is_first_login: 0 | Complete administrative capability (Permission::all()) |
-| **Admin** | admin@jtmk.com | password | is_first_login: 1 | Limited control (user_management operations only) |
-
----
-
 ## 📂 Core Structure Customization
 
 Using the default first-party Laravel Vue starter kit skeleton, layout systems are fully modularized inside resources/js:
